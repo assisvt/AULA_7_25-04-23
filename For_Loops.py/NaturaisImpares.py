@@ -8,12 +8,12 @@ for impar in range (0, 14, 1):
 ''' ----- ALTERAÇÕES:
 a. Mostre também a quantidade de valores gerados. Saída: Quantidade = 7
 b. Mostre também a soma dos valores da sequência. Saída: soma = 49
-c. Refaça o exercício de outra forma
-d. Utilize a mesma ideia (de saltos de 2 elementos) para substituir o for por  um
+c. Refaça o exercício utilizando passo 2
+d. Utilize a mesma ideia (de saltos de 2 elementos (passo = 2)) para substituir o for por  um
    while equivalente.   '''                                       
 
 
-# a. 
+# a. USANDO passo = 1
 ct_impar = 0                          # Antes do for
 for impar in range (0, 14, 1):  # Fazendo for impar in range (0, 14, 1): dá o mesmo resultado, mas usando o 2 o loop começa em 1 e pula de 2 em 2, gerando apenas números ímpares.
     if impar % 2 != 0 and impar < 13:
@@ -52,7 +52,7 @@ print(f'Quantidade: {ct_impar}')
 print(f'Somatório impares: {soma_impar}')
 --
 
-# c. SEM FAZER ESTRUTURA IF
+# c. Utilizando passo 2
 soma_impar = 0
 ct_impar = 0
 for impar in range(1, 14, 2): # ou  (0, 14, 2)
@@ -82,4 +82,18 @@ while True:
             print(f'{num},', end=" ")
     num += 1
 print(f'Quantidade: {ct_impar}')
+print(f'Somatório impares: {soma_impar}')
+--
+
+
+# Simplificando/scrachado (sem vírgula)
+print('Números ímpares até o 13: ')
+soma_impar = 0
+ct_impar = 0
+for impar in range(1, 14, 2): # ou  (0, 14, 2)
+    ct_impar += 1
+    soma_impar += impar 
+    print(impar, end=" ")
+            
+print(f'\nQuantidade: {ct_impar}')
 print(f'Somatório impares: {soma_impar}')
